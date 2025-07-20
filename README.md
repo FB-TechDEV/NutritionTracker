@@ -67,5 +67,5 @@ It’s a single-page application with everything optimized for performance, priv
 * Enable **offline export/import** so users can move data between devices
 * Build a **low-memory Android wrapper** for use on older smartphones
 
-🎉 Thank you for checking out NutritionTracker! Feedback, suggestions, and contributions are welcome!
 
+🎉 Thank you for checking out NutritionTracker! Feedback, suggestions, and contributions are welcome!
