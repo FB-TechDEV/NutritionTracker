@@ -1,7 +1,3 @@
-Here’s your complete **Devpost-style project description** for **NutritionTracker (NutriPal)** — clean, clear, and tailored for submission:
-
----
-
 ## 🌱 Inspiration
 
 In regions with unreliable internet or power cuts, many people struggle to consistently manage their diet or health routines. We wanted to build something truly **offline-first**, lightweight, and useful for **nutrition awareness** — especially in underserved areas. Our goal was to help users **track what they eat**, make informed food choices, and maintain healthy habits — with **zero dependency on the internet or accounts**.
@@ -70,7 +66,3 @@ It’s a single-page application with everything optimized for performance, priv
 * Add **multi-language support** (Arabic & Swahili)
 * Enable **offline export/import** so users can move data between devices
 * Build a **low-memory Android wrapper** for use on older smartphones
-
----
-
-Let me know if you want this in **Markdown**, **Devpost UI-ready format**, or with images or screenshots added!
