@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Diet & Meal Planner</title>
+
+    <meta name="description" content="Offline personal diet and meal planner for tracking calories and macros">
+    <meta name="theme-color" content="#4CAF50">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="LOGO.ico">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">
+                <i class="fas fa-utensils"></i>
+                <span data-translate="app.title">Diet Planner</span>
+            </h1>
+            <div class="header-controls">
+                <button class="language-toggle" id="languageToggle">
+                    <i class="fas fa-globe"></i>
+                    <span id="currentLanguage">EN</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-tabs">
+                <button class="nav-tab active" data-tab="today" data-translate="nav.today">Today</button>
+                <button class="nav-tab" data-tab="weekly" data-translate="nav.weekly">Weekly</button>
+                <button class="nav-tab" data-tab="foods" data-translate="nav.foods">Foods</button>
+                <button class="nav-tab" data-tab="stats" data-translate="nav.stats">Stats</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Today View -->
+            <section id="today-view" class="tab-content active">
+                <div class="date-selector">
+                    <button id="prevDay" class="date-nav-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentDate" class="current-date"></h2>
+                    <button id="nextDay" class="date-nav-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+                <!-- Daily Summary -->
+                <div class="daily-summary">
+                    <div class="summary-card">
+                        <div class="summary-item">
+                            <span class="summary-label" data-translate="summary.calories">Calories</span>
+                            <span class="summary-value" id="totalCalories">0</span>
+                            <span class="summary-unit">kcal</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label" data-translate="summary.protein">Protein</span>
+                            <span class="summary-value" id="totalProtein">0</span>
+                            <span class="summary-unit">g</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label" data-translate="summary.carbs">Carbs</span>
+                            <span class="summary-value" id="totalCarbs">0</span>
+                            <span class="summary-unit">g</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label" data-translate="summary.fat">Fat</span>
+                            <span class="summary-value" id="totalFat">0</span>
+                            <span class="summary-unit">g</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Meals -->
+                <div class="meals-container">
+                    <div class="meal-section" data-meal="breakfast">
+                        <div class="meal-header">
+                            <h3><i class="fas fa-coffee"></i> <span data-translate="meals.breakfast">Breakfast</span></h3>
+                            <button class="add-meal-btn" data-meal="breakfast">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="meal-items" id="breakfast-items"></div>
+                    </div>
+
+                    <div class="meal-section" data-meal="lunch">
+                        <div class="meal-header">
+                            <h3><i class="fas fa-hamburger"></i> <span data-translate="meals.lunch">Lunch</span></h3>
+                            <button class="add-meal-btn" data-meal="lunch">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="meal-items" id="lunch-items"></div>
+                    </div>
+
+                    <div class="meal-section" data-meal="dinner">
+                        <div class="meal-header">
+                            <h3><i class="fas fa-utensils"></i> <span data-translate="meals.dinner">Dinner</span></h3>
+                            <button class="add-meal-btn" data-meal="dinner">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="meal-items" id="dinner-items"></div>
+                    </div>
+
+                    <div class="meal-section" data-meal="snacks">
+                        <div class="meal-header">
+                            <h3><i class="fas fa-apple-alt"></i> <span data-translate="meals.snacks">Snacks</span></h3>
+                            <button class="add-meal-btn" data-meal="snacks">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                        <div class="meal-items" id="snacks-items"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weekly View -->
+            <section id="weekly-view" class="tab-content">
+                <div class="week-selector">
+                    <button id="prevWeek" class="date-nav-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <h2 id="currentWeek" class="current-week"></h2>
+                    <button id="nextWeek" class="date-nav-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="weekly-grid" id="weeklyGrid"></div>
+            </section>
+
+            <!-- Foods Database View -->
+            <section id="foods-view" class="tab-content">
+                <div class="foods-header">
+                    <h2 data-translate="foods.title">Food Database</h2>
+                    <div class="food-search">
+                        <input type="text" id="foodSearch" placeholder="Search foods..." data-translate-placeholder="foods.search">
+                        <i class="fas fa-search"></i>
+                    </div>
+                </div>
+                <div class="foods-grid" id="foodsGrid"></div>
+            </section>
+
+            <!-- Stats View -->
+            <section id="stats-view" class="tab-content">
+                <h2 data-translate="stats.title">Nutrition Statistics</h2>
+                <div class="charts-container">
+                    <div class="chart-card">
+                        <h3 data-translate="stats.daily_intake">Daily Intake</h3>
+                        <canvas id="dailyChart"></canvas>
+                    </div>
+                    <div class="chart-card">
+                        <h3 data-translate="stats.weekly_trend">Weekly Trend</h3>
+                        <canvas id="weeklyChart"></canvas>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Food Selection Modal -->
+    <div id="foodModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 data-translate="modal.add_food">Add Food</h3>
+                <button class="modal-close" id="closeModal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="food-search-modal">
+                    <input type="text" id="modalFoodSearch" placeholder="Search foods..." data-translate-placeholder="foods.search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="food-results" id="foodResults"></div>
+                <div class="food-details" id="foodDetails" style="display: none;">
+                    <h4 id="selectedFoodName"></h4>
+                    <div class="portion-input">
+                        <label for="portionSize" data-translate="modal.portion">Portion (g):</label>
+                        <input type="number" id="portionSize" value="100" min="1">
+                    </div>
+                    <div class="nutrition-preview">
+                        <div class="nutrition-item">
+                            <span data-translate="summary.calories">Calories:</span>
+                            <span id="previewCalories">0</span> kcal
+                        </div>
+                        <div class="nutrition-item">
+                            <span data-translate="summary.protein">Protein:</span>
+                            <span id="previewProtein">0</span> g
+                        </div>
+                        <div class="nutrition-item">
+                            <span data-translate="summary.carbs">Carbs:</span>
+                            <span id="previewCarbs">0</span> g
+                        </div>
+                        <div class="nutrition-item">
+                            <span data-translate="summary.fat">Fat:</span>
+                            <span id="previewFat">0</span> g
+                        </div>
+                    </div>
+                    <button id="addFoodToMeal" class="btn-primary" data-translate="modal.add">Add to Meal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/storage.js"></script>
+    <script src="js/food-database.js"></script>
+    <script src="js/meal-tracker.js"></script>
+    <script src="js/weekly-planner.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
