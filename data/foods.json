@@ -1,0 +1,470 @@
+[
+  {
+    "id": "rice_white_cooked",
+    "name": "White Rice (cooked)",
+    "calories": 130,
+    "protein": 2.7,
+    "carbs": 28,
+    "fat": 0.3,
+    "category": "grains"
+  },
+  {
+    "id": "rice_brown_cooked",
+    "name": "Brown Rice (cooked)",
+    "calories": 112,
+    "protein": 2.6,
+    "carbs": 23,
+    "fat": 0.9,
+    "category": "grains"
+  },
+  {
+    "id": "chicken_breast_cooked",
+    "name": "Chicken Breast (cooked)",
+    "calories": 165,
+    "protein": 31,
+    "carbs": 0,
+    "fat": 3.6,
+    "category": "protein"
+  },
+  {
+    "id": "chicken_thigh_cooked",
+    "name": "Chicken Thigh (cooked)",
+    "calories": 209,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 11,
+    "category": "protein"
+  },
+  {
+    "id": "egg_whole_large",
+    "name": "Whole Egg (large)",
+    "calories": 155,
+    "protein": 13,
+    "carbs": 1.1,
+    "fat": 11,
+    "category": "protein"
+  },
+  {
+    "id": "egg_white",
+    "name": "Egg White",
+    "calories": 52,
+    "protein": 11,
+    "carbs": 0.7,
+    "fat": 0.2,
+    "category": "protein"
+  },
+  {
+    "id": "apple_fresh",
+    "name": "Apple (fresh)",
+    "calories": 52,
+    "protein": 0.3,
+    "carbs": 14,
+    "fat": 0.2,
+    "category": "fruit"
+  },
+  {
+    "id": "banana_fresh",
+    "name": "Banana (fresh)",
+    "calories": 89,
+    "protein": 1.1,
+    "carbs": 23,
+    "fat": 0.3,
+    "category": "fruit"
+  },
+  {
+    "id": "orange_fresh",
+    "name": "Orange (fresh)",
+    "calories": 47,
+    "protein": 0.9,
+    "carbs": 12,
+    "fat": 0.1,
+    "category": "fruit"
+  },
+  {
+    "id": "strawberries_fresh",
+    "name": "Strawberries (fresh)",
+    "calories": 32,
+    "protein": 0.7,
+    "carbs": 8,
+    "fat": 0.3,
+    "category": "fruit"
+  },
+  {
+    "id": "blueberries_fresh",
+    "name": "Blueberries (fresh)",
+    "calories": 57,
+    "protein": 0.7,
+    "carbs": 14,
+    "fat": 0.3,
+    "category": "fruit"
+  },
+  {
+    "id": "broccoli_cooked",
+    "name": "Broccoli (cooked)",
+    "calories": 35,
+    "protein": 2.8,
+    "carbs": 7,
+    "fat": 0.4,
+    "category": "vegetable"
+  },
+  {
+    "id": "spinach_raw",
+    "name": "Spinach (raw)",
+    "calories": 23,
+    "protein": 2.9,
+    "carbs": 3.6,
+    "fat": 0.4,
+    "category": "vegetable"
+  },
+  {
+    "id": "carrots_raw",
+    "name": "Carrots (raw)",
+    "calories": 41,
+    "protein": 0.9,
+    "carbs": 10,
+    "fat": 0.2,
+    "category": "vegetable"
+  },
+  {
+    "id": "sweet_potato_baked",
+    "name": "Sweet Potato (baked)",
+    "calories": 90,
+    "protein": 2,
+    "carbs": 21,
+    "fat": 0.1,
+    "category": "vegetable"
+  },
+  {
+    "id": "potato_baked",
+    "name": "Potato (baked)",
+    "calories": 93,
+    "protein": 2.5,
+    "carbs": 21,
+    "fat": 0.1,
+    "category": "vegetable"
+  },
+  {
+    "id": "tomato_fresh",
+    "name": "Tomato (fresh)",
+    "calories": 18,
+    "protein": 0.9,
+    "carbs": 3.9,
+    "fat": 0.2,
+    "category": "vegetable"
+  },
+  {
+    "id": "cucumber_fresh",
+    "name": "Cucumber (fresh)",
+    "calories": 16,
+    "protein": 0.7,
+    "carbs": 4,
+    "fat": 0.1,
+    "category": "vegetable"
+  },
+  {
+    "id": "bread_whole_wheat",
+    "name": "Whole Wheat Bread",
+    "calories": 247,
+    "protein": 13,
+    "carbs": 41,
+    "fat": 4.2,
+    "category": "grains"
+  },
+  {
+    "id": "bread_white",
+    "name": "White Bread",
+    "calories": 265,
+    "protein": 9,
+    "carbs": 49,
+    "fat": 3.2,
+    "category": "grains"
+  },
+  {
+    "id": "oats_cooked",
+    "name": "Oats (cooked)",
+    "calories": 68,
+    "protein": 2.4,
+    "carbs": 12,
+    "fat": 1.4,
+    "category": "grains"
+  },
+  {
+    "id": "quinoa_cooked",
+    "name": "Quinoa (cooked)",
+    "calories": 120,
+    "protein": 4.4,
+    "carbs": 22,
+    "fat": 1.9,
+    "category": "grains"
+  },
+  {
+    "id": "pasta_whole_wheat_cooked",
+    "name": "Whole Wheat Pasta (cooked)",
+    "calories": 124,
+    "protein": 5.3,
+    "carbs": 26,
+    "fat": 1.1,
+    "category": "grains"
+  },
+  {
+    "id": "milk_whole",
+    "name": "Whole Milk",
+    "calories": 61,
+    "protein": 3.2,
+    "carbs": 4.8,
+    "fat": 3.3,
+    "category": "dairy"
+  },
+  {
+    "id": "milk_skim",
+    "name": "Skim Milk",
+    "calories": 34,
+    "protein": 3.4,
+    "carbs": 5,
+    "fat": 0.1,
+    "category": "dairy"
+  },
+  {
+    "id": "yogurt_greek_plain",
+    "name": "Greek Yogurt (plain)",
+    "calories": 59,
+    "protein": 10,
+    "carbs": 3.6,
+    "fat": 0.4,
+    "category": "dairy"
+  },
+  {
+    "id": "cheese_cheddar",
+    "name": "Cheddar Cheese",
+    "calories": 403,
+    "protein": 25,
+    "carbs": 1.3,
+    "fat": 33,
+    "category": "dairy"
+  },
+  {
+    "id": "cheese_mozzarella",
+    "name": "Mozzarella Cheese",
+    "calories": 280,
+    "protein": 28,
+    "carbs": 2.2,
+    "fat": 17,
+    "category": "dairy"
+  },
+  {
+    "id": "salmon_cooked",
+    "name": "Salmon (cooked)",
+    "calories": 206,
+    "protein": 22,
+    "carbs": 0,
+    "fat": 12,
+    "category": "protein"
+  },
+  {
+    "id": "tuna_canned_water",
+    "name": "Tuna (canned in water)",
+    "calories": 116,
+    "protein": 25,
+    "carbs": 0,
+    "fat": 1,
+    "category": "protein"
+  },
+  {
+    "id": "beef_lean_cooked",
+    "name": "Lean Beef (cooked)",
+    "calories": 250,
+    "protein": 26,
+    "carbs": 0,
+    "fat": 15,
+    "category": "protein"
+  },
+  {
+    "id": "pork_lean_cooked",
+    "name": "Lean Pork (cooked)",
+    "calories": 242,
+    "protein": 27,
+    "carbs": 0,
+    "fat": 14,
+    "category": "protein"
+  },
+  {
+    "id": "turkey_breast_cooked",
+    "name": "Turkey Breast (cooked)",
+    "calories": 135,
+    "protein": 30,
+    "carbs": 0,
+    "fat": 1,
+    "category": "protein"
+  },
+  {
+    "id": "tofu_firm",
+    "name": "Tofu (firm)",
+    "calories": 144,
+    "protein": 17,
+    "carbs": 3,
+    "fat": 9,
+    "category": "protein"
+  },
+  {
+    "id": "beans_black_cooked",
+    "name": "Black Beans (cooked)",
+    "calories": 132,
+    "protein": 8.9,
+    "carbs": 24,
+    "fat": 0.5,
+    "category": "legume"
+  },
+  {
+    "id": "lentils_cooked",
+    "name": "Lentils (cooked)",
+    "calories": 116,
+    "protein": 9,
+    "carbs": 20,
+    "fat": 0.4,
+    "category": "legume"
+  },
+  {
+    "id": "chickpeas_cooked",
+    "name": "Chickpeas (cooked)",
+    "calories": 164,
+    "protein": 8.9,
+    "carbs": 27,
+    "fat": 2.6,
+    "category": "legume"
+  },
+  {
+    "id": "almonds_raw",
+    "name": "Almonds (raw)",
+    "calories": 576,
+    "protein": 21,
+    "carbs": 22,
+    "fat": 49,
+    "category": "nuts"
+  },
+  {
+    "id": "walnuts_raw",
+    "name": "Walnuts (raw)",
+    "calories": 654,
+    "protein": 15,
+    "carbs": 14,
+    "fat": 65,
+    "category": "nuts"
+  },
+  {
+    "id": "peanuts_raw",
+    "name": "Peanuts (raw)",
+    "calories": 567,
+    "protein": 26,
+    "carbs": 16,
+    "fat": 49,
+    "category": "nuts"
+  },
+  {
+    "id": "cashews_raw",
+    "name": "Cashews (raw)",
+    "calories": 553,
+    "protein": 18,
+    "carbs": 30,
+    "fat": 44,
+    "category": "nuts"
+  },
+  {
+    "id": "peanut_butter",
+    "name": "Peanut Butter",
+    "calories": 588,
+    "protein": 25,
+    "carbs": 20,
+    "fat": 50,
+    "category": "nuts"
+  },
+  {
+    "id": "avocado_fresh",
+    "name": "Avocado (fresh)",
+    "calories": 160,
+    "protein": 2,
+    "carbs": 9,
+    "fat": 15,
+    "category": "fruit"
+  },
+  {
+    "id": "olive_oil",
+    "name": "Olive Oil",
+    "calories": 884,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 100,
+    "category": "fat"
+  },
+  {
+    "id": "butter",
+    "name": "Butter",
+    "calories": 717,
+    "protein": 0.9,
+    "carbs": 0.1,
+    "fat": 81,
+    "category": "fat"
+  },
+  {
+    "id": "coconut_oil",
+    "name": "Coconut Oil",
+    "calories": 862,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 100,
+    "category": "fat"
+  },
+  {
+    "id": "honey",
+    "name": "Honey",
+    "calories": 304,
+    "protein": 0.3,
+    "carbs": 82,
+    "fat": 0,
+    "category": "sweetener"
+  },
+  {
+    "id": "sugar_white",
+    "name": "White Sugar",
+    "calories": 387,
+    "protein": 0,
+    "carbs": 100,
+    "fat": 0,
+    "category": "sweetener"
+  },
+  {
+    "id": "dark_chocolate",
+    "name": "Dark Chocolate (70%+)",
+    "calories": 546,
+    "protein": 8,
+    "carbs": 46,
+    "fat": 38,
+    "category": "snack"
+  },
+  {
+    "id": "coffee_black",
+    "name": "Coffee (black)",
+    "calories": 2,
+    "protein": 0.3,
+    "carbs": 0,
+    "fat": 0,
+    "category": "beverage"
+  },
+  {
+    "id": "tea_green",
+    "name": "Green Tea",
+    "calories": 1,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "category": "beverage"
+  },
+  {
+    "id": "water",
+    "name": "Water",
+    "calories": 0,
+    "protein": 0,
+    "carbs": 0,
+    "fat": 0,
+    "category": "beverage"
+  }
+]
